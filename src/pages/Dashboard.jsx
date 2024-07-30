@@ -1,3 +1,5 @@
+import Test from "../features/boards/Test";
+
 export default function Dashboard() {
   return (
     <div>
@@ -5,6 +7,7 @@ export default function Dashboard() {
       Quisquam, magni? Assumenda voluptates culpa ullam in eligendi, vero a
       omnis! Dolore tenetur velit aperiam, nostrum accusantium exercitationem
       dolorem sequi assumenda atque.
+      <Test />
     </div>
   );
 }
