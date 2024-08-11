@@ -1,4 +1,5 @@
 import Test from "../features/boards/Test";
+import Create from "../features/boards/Create";
 
 export default function Dashboard() {
   return (
@@ -8,6 +9,7 @@ export default function Dashboard() {
       omnis! Dolore tenetur velit aperiam, nostrum accusantium exercitationem
       dolorem sequi assumenda atque.
       <Test />
+      <Create />
     </div>
   );
 }
