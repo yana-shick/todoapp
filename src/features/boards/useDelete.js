@@ -1,10 +1,10 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { deleteBoard } from "../../sevices/apiBoards";
+import { deleteBoard as deleteBoardApi } from "../../sevices/apiBoards";
 
 export function useDelete() {
   const queryClient = useQueryClient();
-  const { isPending, mutate: delBoard } = useMutation({
-    mutationFn: deleteBoard, //
+  const { isPending, mutate: deleteBoard } = useMutation({
+    mutationFn: deleteBoardApi, //
     onSuccess: () => {
       console.log("success board deleted");
       queryClient.invalidateQueries({ queryKey: ["boards"] });
@@ -13,5 +13,5 @@ export function useDelete() {
       console.log("error delete board");
     },
   });
-  return { isPending, delBoard };
+  return { isPending, deleteBoard };
 }

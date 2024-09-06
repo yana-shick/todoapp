@@ -1,15 +1,11 @@
-import Test from "../features/boards/Test";
-import Create from "../features/boards/Create";
+import Boards from "../features/boards/Boards";
+import CreateNewBoard from "../features/boards/CreateNewBoard";
 
 export default function Dashboard() {
   return (
-    <div>
-      Dashboard Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-      Quisquam, magni? Assumenda voluptates culpa ullam in eligendi, vero a
-      omnis! Dolore tenetur velit aperiam, nostrum accusantium exercitationem
-      dolorem sequi assumenda atque.
-      <Test />
-      <Create />
-    </div>
+    <>
+      <Boards />
+      <CreateNewBoard />
+    </>
   );
 }
