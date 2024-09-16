@@ -4,7 +4,7 @@ import Logo from "./Logo";
 
 const StyledSidebar = styled.aside`
   grid-row: 1 / -1;
-  background-color: yellow;
+  background-color: #222;
 `;
 
 export default function Sidebar() {

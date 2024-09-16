@@ -13,7 +13,7 @@ const StyledAppLayoute = styled.div`
 `;
 const Main = styled.main`
   padding: 4rem 4.8rem 6.4rem;
-  background-color: lightblue;
+  background-image: linear-gradient(to right top, #222222, #27272a, #2d2c33, #32313c, #383645);
 `;
 
 const Container = styled.div`
@@ -22,8 +22,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  border: 1px solid red;
-  background-color: lightpink;
+  background-color: none;
 `;
 export default function AppLayout() {
   return (
