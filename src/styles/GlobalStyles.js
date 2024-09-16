@@ -7,7 +7,7 @@ export const GlobalStyles = createGlobalStyle`
   margin: 0;
 }
 body {
-    color: red;
+    color: white;
 }
 
 `;

@@ -4,8 +4,8 @@ import CreateNewBoard from "../features/boards/CreateNewBoard";
 export default function Dashboard() {
   return (
     <>
-      <Boards />
       <CreateNewBoard />
+      <Boards />
     </>
   );
 }
