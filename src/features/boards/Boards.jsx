@@ -7,10 +7,10 @@ import Board from "./Board";
 
 const StyledBoards = styled.div`
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 1rem;
+  
 `;
 
 export default function Boards() {
