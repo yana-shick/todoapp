@@ -1,5 +1,5 @@
 import { useBoards } from "./useBoards";
-import { useDelete } from "./useDelete";
+import { useDeleteBoard } from "./useDeleteBoard";
 
 import styled from "styled-components";
 
@@ -15,12 +15,13 @@ const StyledBoards = styled.div`
 
 export default function Boards() {
   const { boards, isPending } = useBoards();
-  
-  const { deleteBoard } = useDelete();
+
+  const { deleteBoard } = useDeleteBoard();
 
   function handleDelete(id) {
     deleteBoard(id);
   }
+
   if (isPending) return <div>Loading...</div>;
   return (
     <StyledBoards>

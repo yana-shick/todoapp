@@ -5,7 +5,7 @@ import styled from "styled-components";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 
-const StyledAppLayoute = styled.div`
+const StyledAppLayout = styled.div`
   display: grid;
   grid-template-columns: 1fr 5fr;
   grid-template-rows: auto 1fr;
@@ -25,9 +25,10 @@ const Container = styled.div`
   border: 1px solid red;
   background-color: lightpink;
 `;
+
 export default function AppLayout() {
   return (
-    <StyledAppLayoute>
+    <StyledAppLayout>
       <Header />
       <Sidebar />
       <Main>
@@ -35,6 +36,6 @@ export default function AppLayout() {
           <Outlet />
         </Container>
       </Main>
-    </StyledAppLayoute>
+    </StyledAppLayout>
   );
 }

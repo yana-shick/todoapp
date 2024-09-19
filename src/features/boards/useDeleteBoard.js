@@ -1,7 +1,7 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { deleteBoard as deleteBoardApi } from "../../sevices/apiBoards";
 
-export function useDelete() {
+export function useDeleteBoard() {
   const queryClient = useQueryClient();
   const { isPending, mutate: deleteBoard } = useMutation({
     mutationFn: deleteBoardApi, //

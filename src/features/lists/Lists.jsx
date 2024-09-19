@@ -1,17 +1,20 @@
 import { useLists } from "./useLists";
-import { useLocation } from "react-router-dom";
+import { useDeleteList } from "./useDeleteList";
 
 import List from "./List";
 
-export default function Lists() {
-
-  const location = useLocation();
-
-  let boardId = location.pathname.split("/").at(-1); 
-
+export default function Lists({ boardId }) {
   const { lists, isPending } = useLists(boardId);
-  
+
+  const { deleteList } = useDeleteList();
+
+  function handleDelete(id) {
+    deleteList(id);
+  }
+
   if (!isPending) {
-    return lists.map((list) => <List key={list.id} list={list} />);
+    return lists.map((list) => (
+      <List key={list.id} list={list} onDelete={handleDelete} />
+    ));
   }
 }

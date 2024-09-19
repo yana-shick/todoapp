@@ -1,7 +1,7 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { createBoard as createBoardApi } from "../../sevices/apiBoards";
 
-export function useCreate() {
+export function useCreateBoard() {
   const queryClient = useQueryClient();
   const { isPending, mutate: createBoard } = useMutation({
     mutationFn: createBoardApi, //

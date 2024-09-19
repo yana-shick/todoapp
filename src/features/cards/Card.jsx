@@ -1,6 +1,8 @@
-
-export default function Card() {
+export default function Card({ card, onDelete }) {
   return (
-    <div>Card</div>
-  )
+    <>
+      <div>{card.name}</div>
+      <button onClick={() => onDelete(card.id)}>delete</button>
+    </>
+  );
 }

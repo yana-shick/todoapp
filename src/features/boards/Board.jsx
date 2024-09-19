@@ -1,6 +1,6 @@
-import styled from "styled-components";
-
 import { NavLink } from "react-router-dom";
+
+import styled from "styled-components";
 
 const StyledBoard = styled.div`
   border: 1px solid black;
@@ -9,9 +9,8 @@ const StyledBoard = styled.div`
 `;
 
 export default function Board({ board, onDelete }) {
-
   const boardUrl = `/list/${board.id}`;
-  
+
   return (
     <StyledBoard>
       <NavLink to={boardUrl}>{board.name}</NavLink>

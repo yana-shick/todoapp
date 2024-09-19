@@ -6,7 +6,6 @@ export async function getBoards() {
     console.error(error);
     throw new Error("Boards could not be load");
   }
-  // console.log(data);
   return data;
 }
 

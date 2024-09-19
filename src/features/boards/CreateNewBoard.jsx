@@ -1,8 +1,7 @@
-import { useCreate } from "./useCreate";
-import { useState } from "react";
+import { useCreateBoard } from "./useCreateBoard";
 
 export default function CreateNewBoard() {
-  const { createBoard } = useCreate();
+  const { createBoard } = useCreateBoard();
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -12,6 +11,7 @@ export default function CreateNewBoard() {
       },
     });
   }
+
   return (
     <div>
       <form onSubmit={handleSubmit}>

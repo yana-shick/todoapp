@@ -1,15 +1,17 @@
 import styled from "styled-components";
+
 import Cards from "../cards/Cards";
 
-const StylesList = styled.div`
+const StyledList = styled.div`
   border: 1px solid black;
 `;
 
-export default function List({ list }) {
+export default function List({ list, onDelete }) {
   return (
-    <StylesList>
+    <StyledList>
       {list.name}
-      <Cards listId={list.id} />
-    </StylesList>
+      <button onClick={() => onDelete(list.id)}>delete</button>
+      <Cards list={list} />
+    </StyledList>
   );
 }

@@ -4,15 +4,14 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
 import { GlobalStyles } from "./styles/GlobalStyles";
 
-import Dashboard from "./pages/Dashboard";
 import AppLayout from "./ui/AppLayout";
-import List from "./features/lists/Lists";
+import Dashboard from "./pages/Dashboard";
+import Home from "./pages/Home";
 
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      // staleTime: 6 * 1000, // one minute
-      retry: 5, // by default query will tries request 3 times
+      retry: 3, // by default query will tries request 3 times
       staleTime: 0,
     },
   },
@@ -26,8 +25,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route element={<AppLayout />}>
-            <Route path="" element={<Dashboard />} />
-            <Route path="list/:boardId" element={<List />} />
+            <Route path="" element={<Home />} />
+            <Route path="list/:boardId" element={<Dashboard />} />
           </Route>
         </Routes>
       </BrowserRouter>
