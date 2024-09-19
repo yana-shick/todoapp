@@ -6,9 +6,9 @@ import styled from "styled-components";
 import Board from "./Board";
 
 const StyledBoards = styled.div`
-  border: 1px solid black;
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: flex-start;
   flex-wrap: wrap;
   gap: 1rem;
 `;

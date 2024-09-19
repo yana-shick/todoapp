@@ -4,8 +4,8 @@ import CreateNewBoard from "../features/boards/CreateNewBoard";
 export default function Home() {
   return (
     <>
-      <Boards />
       <CreateNewBoard />
+      <Boards />
     </>
   );
 }

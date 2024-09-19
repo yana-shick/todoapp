@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const StyledHeader = styled.header`
-  background-color: pink;
+  background-color: #383645;
   display: flex;
   justify-content: end;
 `;
