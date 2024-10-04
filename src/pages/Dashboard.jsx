@@ -8,8 +8,8 @@ export default function Dashboard() {
   let boardId = location.pathname.split("/").at(-1);
   return (
     <>
-      <Lists boardId={boardId} />
       <CreateNewList boardId={boardId} />
+      <Lists key={boardId} boardId={boardId} />
     </>
   );
 }

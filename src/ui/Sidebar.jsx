@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import styled from "styled-components";
 
 import Logo from "./Logo";
-import BoardMenu from "../features/boards/BoardSideMenu";
+import BoardSideMenu from "../features/boards/BoardSideMenu";
 
 const StyledSidebar = styled.aside`
   grid-row: 1 / -1;
@@ -24,7 +24,7 @@ export default function Sidebar() {
   return (
     <StyledSidebar>
       <Logo />
-      <BoardMenu />
+      <BoardSideMenu />
     </StyledSidebar>
   );
 }

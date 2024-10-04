@@ -6,6 +6,7 @@ export async function getBoards() {
     console.error(error);
     throw new Error("Boards could not be load");
   }
+  console.log("boards loaded from api");
   return data;
 }
 
@@ -15,6 +16,7 @@ export async function createBoard(newBoard) {
     console.error(error);
     throw new Error("Board could not be load");
   }
+  console.log("boards created from api");
 }
 
 export async function deleteBoard(id) {
@@ -23,4 +25,5 @@ export async function deleteBoard(id) {
     console.error(error);
     throw new Error("Board could not be deleted");
   }
+  console.log("boards deleted from api");
 }

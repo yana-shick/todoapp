@@ -14,10 +14,11 @@ export default function BoardSideMenu() {
   if (!isPending) {
     return (
       <StyledBoardMenu>
+        <CreateNewBoard />
+        <br />
         {boards.map((board) => (
           <div key={board.id}>{board.name}</div>
         ))}
-        <CreateNewBoard />
       </StyledBoardMenu>
     );
   }

@@ -13,6 +13,7 @@ const queryClient = new QueryClient({
     queries: {
       retry: 3, // by default query will tries request 3 times
       staleTime: 0,
+      refetchOnWindowFocus: false, //  don't automatically requests fresh data when user leaves your application and returns
     },
   },
 });
